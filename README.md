@@ -1,9 +1,10 @@
-# VGSales Analysis
+# Analysis_app
 
-## Análise dos dados do dataset vgsales.csv
+## Um app para Análise Exploratória de Dados.
 
-Essencialmente, este app é parte do estudo sobre o framework Streamlit onde serão mostrados os resultados da análise dos dados do dataset vgsales e que pode ser encontrado no [Kaggle](https://www.kaggle.com/kedokedokedo/vgsales).
+Essencialmente, este app é parte do estudo sobre o framework [Streamlit](https://www.streamlit.io/) com o intuito de automatizar o processo de EDA (Exploratory Data Analysis / Análise Exploratória de Dados)
 
 
 #### Qualquer sugestão, entre em contato:
-- E-mail : <robertocsp95@gmail.com>
+- E-mail   : <robertocsp95@gmail.com>
+- LinkedIn : [Roberto Paixão](https://www.linkedin.com/in/roberto-paixao95)
