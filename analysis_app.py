@@ -35,8 +35,6 @@ def main():
             porcentagem_faltante = df.isnull().mean()
             total_faltante = df.isnull().sum()
             st.text(f'Total faltante: {total_faltante.sum()} ({porcentagem_faltante.sum():.2f}%)')
-             
-            
 
             st.markdown('#### Estatísticas Descritivas')
             st.dataframe(df.describe().T)
@@ -51,6 +49,11 @@ def main():
             histograma = px.histogram(df, x=opcoes_colunas_num)
             st.plotly_chart(histograma)
 
+            st.markdown('## BOXPLOT')
+            opcoes_box = st.selectbox('Selecione a variável.', colunas_num)
+            boxplot = px.box(df[opcoes_box], orientation='h')
+            st.plotly_chart(boxplot)
+
             st.markdown('## CORRELAÇÕES')
             obj_x = st.selectbox('Eixo X:', colunas_num)
             obj_y = st.selectbox('Eixo Y:', colunas_num)
@@ -62,7 +65,11 @@ def main():
             plot_barras = px.bar(x = df[opcoes_colunas_obj].value_counts().index,
                                  y = df[opcoes_colunas_obj].value_counts().values,
                                  )
+            plot_barras_h = px.bar(x = df[opcoes_colunas_obj].value_counts().values,
+                            y = df[opcoes_colunas_obj].value_counts().index)
             st.plotly_chart(plot_barras)
+            st.plotly_chart(plot_barras_h)
+
 
 
 if __name__ == '__main__':
